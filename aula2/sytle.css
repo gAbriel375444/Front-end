@@ -1,0 +1,146 @@
+
+/* controla o fundo
+onde tá meu bg */
+body 
+{   
+    /*cor do fundo */
+    background-color: hsl(193, 95%, 35%);
+}
+
+/* controla o titulo h1 */
+h1 
+{
+
+    position: fixed;
+
+    top: -5%;
+
+    /*distancia da esquerda até o texto */
+    left: 0;
+
+    /*largura do texto*/
+    width: 100%;
+
+    /*altura do texto*/
+    height: 7%;
+
+    /*cor do fundo */
+    background-color: rgb(43, 54, 151);
+
+    /*determinia o tamanho e altura 
+    assim posso dividir melhor na tela*/
+    padding: 7px;
+
+
+    /*cor do texto */
+    color: rgb(118, 164, 234);
+
+    /*a camada em que o texto está */
+    z-index: 1000;
+
+
+}
+
+/* controla o subtitulo h2 */
+h2
+{
+    position: fixed;
+
+    top: 15%;
+
+    /*distancia da esquerda até o texto */
+    left: 0;
+
+    /*largura do texto*/
+    width: 24%;
+
+    /*cor do fundo */
+    background-color: rgb(43, 54, 151);
+
+    /*determinia o tamanho e altura 
+    assim posso dividir melhor na tela*/
+    padding: 7px;
+
+    /*cor do texto */
+    color: rgb(118, 164, 234);
+
+    /*a camada em que o texto está */
+    z-index: 1000;
+
+
+}
+
+/* controla o texto sobre */
+h3
+{
+    /*muda a margem do topo */
+    margin-top: 33px;
+    
+    position: fixed;
+
+    top: 20%;
+
+    /*distancia da esquerda até o texto */
+    left: 0;
+
+    /*largura do texto*/
+    width: 30%;
+
+    
+
+    /*cor do fundo */
+    background-color: rgb(43, 54, 151);
+
+    /*determinia o tamanho e altura 
+    assim posso dividir melhor na tela*/
+    padding: 7px;
+
+    /*cor do texto */
+    color: rgb(118, 164, 234);
+
+    /*a camada em que o texto está */
+    z-index: 1000;
+}
+
+/* controla o nav
+onde posso navegar entre as abas */
+nav {
+    text-align: center;
+
+    color: bisque;
+}
+
+/* acessa a div */
+.topo
+{
+
+    /*deixa a posição fixa */
+    position: fixed;
+
+    /*distancia do topo até o texto */
+    top: 8%;
+
+    /*distancia da esquerda até o texto */
+    left: 0;
+
+    /*largura do texto*/
+    width: 100%;
+
+
+    /*cor do fundo */
+    background-color: rgb(107, 191, 247);
+
+    /*cor do texto */
+    color: aliceblue;
+
+    /*determinia o tamanho e altura 
+    assim posso dividir melhor na tela*/
+    padding: 15px, 15;
+
+    /* alinhamento do texto. Aqui está no centro*/
+    text-align: center;
+
+    /*a camada em que o texto está */
+    z-index: 1000;
+
+}

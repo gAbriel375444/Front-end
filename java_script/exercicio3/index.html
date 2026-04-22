@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot da Instituição de Ensino</title>
+    <style>
+        /* Estilos para a interface do chatbot */
+        #chat-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-output"></div>
+        <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+    </div>
+
+    <script>
+        // Simulação de respostas do chatbot
+        const chatbotResponses = {
+            saudacao: "Olá! Como posso ajudar você?",
+            cursos: "Oferecemos cursos nas áreas de TI, Design e Administração. Qual área você tem interesse?",
+            banho: "Oferecemos banho com tosa e sem tosa",
+            requisitos: "Para se matricular, você precisa ter concluído o ensino médio e apresentar documentos pessoais.",
+            descricao_ti: "Nosso curso de TI abrange programação, redes, segurança e desenvolvimento web.",
+            descricao_design: "O curso de Design explora áreas como UX/UI, ilustração e design gráfico.",
+            descricao_admin: "Administração oferece disciplinas de gestão, finanças e empreendedorismo."
+        };
+
+        // Elementos da interface
+        const chatOutput = document.getElementById("chat-output");
+        const userInput = document.getElementById("user-input");
+
+        // Função para exibir mensagens no chat
+        function displayMessage(message) {
+            const chatMessage = document.createElement("p");
+            chatMessage.textContent = message;
+            chatOutput.appendChild(chatMessage);
+        }
+
+        // Função para processar a entrada do usuário
+        function processUserInput() {
+            const userMessage = userInput.value.toLowerCase();
+            let chatbotMessage;
+
+            if (userMessage.includes("cursos")) {
+                chatbotMessage = chatbotResponses.cursos;
+            } else if (userMessage.includes("requisitos")) {
+                chatbotMessage = chatbotResponses.requisitos;
+            } else if (userMessage.includes("ti")) {
+                chatbotMessage = chatbotResponses.descricao_ti;
+            } else if (userMessage.includes("design")) {
+                chatbotMessage = chatbotResponses.descricao_design;
+            } else if (userMessage.includes("admin")) {
+                chatbotMessage = chatbotResponses.descricao_admin;
+            } else {
+                chatbotMessage = chatbotResponses.saudacao;
+            }
+
+            displayMessage(`Você: ${userMessage}`);
+            displayMessage(`Chatbot: ${chatbotMessage}`);
+            userInput.value = "";
+        }
+
+        // Event listener para a tecla Enter
+        userInput.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                processUserInput();
+            }
+        });
+
+        // Mensagem inicial do chatbot
+        displayMessage(`Chatbot: ${chatbotResponses.saudacao}`);
+    </script>
+</body>
+</html>

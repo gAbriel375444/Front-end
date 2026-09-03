@@ -1,6 +1,21 @@
+body{
+
+    background-color: antiquewhite;
+}
+
 .card{
 
     border-radius: 20px;
     border: 4px;
-    color: aqua;
+    color: rgb(0, 0, 0);
+    background-color: rgb(181, 175, 255);
+    text-align: center;
+    padding: 20px;
+}
+.button{
+
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    scale: 1.5;
 }
